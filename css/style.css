@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/* 共通css */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+}
+body {
+    font-family: Arial, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+    color: #24292E;
+    font-size: 14px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+a {
+    text-decoration: none;
+    color: #24292E;
+}
+ul {
+    list-style: none;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn {
+    color: #2a2a2a;
+    border: 1px solid #24292E;
+    padding: 14px 36px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 30px;
+}
+a:hover {
+    opacity: .8;
+}
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+header ,
+.gallery,
+.fashion-style {
+    margin-bottom: 80px;
+}
+
+/* ヘッダー */
+header {
+    background-image: url(../img/mainvisual.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+header .site-title {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+/* introduction */
+.introduction {
+    text-align: center;
+}
+.introduction .introduction-title {
+    margin-bottom: 20px;
+    font-size: 24px; 
+}
+.introduction p {
+    margin-bottom: 40px;
+}
+
+/* gallery */
+.gallery {
+    margin-bottom: 80px;
+    text-align: center;
+}
+.gallery-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery-flex .item {
+    width: 49%;
+    position: relative;
+}
+.gallery-flex .text {
+    max-width: 290px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 15px 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+.gallery-flex .text .title {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+/* ファッション＆スタイル */
+.fashion-style {
+    background-image: url(../img/fashion.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 520px;
+    padding-top: 60px;
+    text-align: center;   
+}
+.fashion-style p {
+    margin-bottom: 30px;
+}
+
+/*カタログ＆アンティーク*/
+.catalog-antique {
+    background-color: #F5F5F5;
+    padding: 60px 0;
+}
+.catalog-antique .flex-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.catalog-antique .flex-item .catalog-img {
+    width: 48%;
+}
+.catalog-antique .flex-item .catalog-img img {
+    width: 100%;
+}
+.catalog-antique .flex-item .catalog-text {
+    width: 48%;
+    text-align: center;
+}
+.catalog-antique .sec-title {
+  margin-bottom: 40px;
+}
+.catalog-antique .flex-item .catalog-text p {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.catalog-antique .flex-item .catalog-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.catalog-antique .flex-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.catalog-antique .flex-item .antique-img {
+    width: 48%;
+}
+.catalog-antique .flex-item .antique-img img {
+    width: 100%;
+}
+.catalog-antique .flex-item .antique-text {
+    width: 48%;
+    text-align: center;
+}
+.catalog-antique .flex-item .antique-text p {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.catalog-antique .flex-item .antique-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* フッター */
+footer {
+    background-color: #333333;
+    font-size: 12px;
+}
+footer .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+footer .footer-flex .item {
+    width: calc(100% / 3);
+    line-height: 2;
+}
+footer .footer-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+footer .footer-flex .item:first-of-type {
+    padding: 60px 0;
+}
+footer .footer-flex .item li::before {
+    content: "-";
+    margin-right: 5px;
+
+}
+footer .copy-right {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 30px 0;
+}
+
+/* SP */
+@media (max-width: 896px) { 
+/* ギャラリー---
+---------------------------------- */
+    .gallery .gallery-flex {
+        flex-direction: column;
+    }
+    .gallery .gallery-flex .item {
+        width: 100%;
+    }
+    .gallery .gallery-flex .item:first-of-type {
+        margin-bottom: 30px;
+    }
+
+/* ファッション---
+---------------------------------- */
+    .fashion-style {
+        padding-top: 35px;
+        margin-bottom: 50px;
+    }
+
+/* カタログ&アンティーク---
+---------------------------------- */
+    .catalog-antique {
+        padding: 30px 0;
+    }
+    .catalog-antique .flex-item {
+        flex-direction: column;
+    }
+    .catalog-antique .flex-item .catalog-img {
+        width: 100%;
+    }
+    .catalog-antique .flex-item .catalog-text {
+        width: 100%;
+        margin-top: 60px;
+    }
+    .catalog-antique .flex-item .catalog-text .section-title {
+        margin-bottom: 40px;
+    }
+    .catalog-antique .flex-item .antique-text {
+        width: 100%;
+    }
+    .catalog-antique .flex-item .antique-text .section-title {
+        margin-bottom: 40px;
+    }
+    .catalog-antique .flex-item .antique-img {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+/* フッター---
+---------------------------------- */
+    footer .footer-flex {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    footer .footer-flex .item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .footer-flex .item:first-of-type {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+
+
